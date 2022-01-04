@@ -1,6 +1,6 @@
 # Cdk BreakpointObserver Example Application
 
-The application demonstrates the use of BreakpointObserver with MediaMatcher from the cdk / layout package, which provides utilities to build responsive UIs that react to screen-size changes.
+The application demonstrates the use of `BreakpointObserver` together with `MediaMatcher` from the `@angular/cdk/layout` package, which provides utilities to build responsive UIs that react to screen-size changes.
 
 By resize browser window, we can observe current screen size changes.
 The screen also displays the values (in pixels) for all the breakpoints predefined in the package.
