@@ -1,14 +1,21 @@
-<ng-container *ngIf="breakpointState | async as state">
+<div *ngIf="breakpointState | async as state" style="display: flex; gap: 10px">
   <h2 *ngIf="state.breakpoints[xSmall]">Breakpoint: Extra Small</h2>
   <h2 *ngIf="state.breakpoints[small]">Breakpoint: Small</h2>
   <h2 *ngIf="state.breakpoints[medium]">Breakpoint: Medium</h2>
   <h2 *ngIf="state.breakpoints[large]">Breakpoint: Large</h2>
   <h2 *ngIf="state.breakpoints[xLarge]">Breakpoint: Extra Large</h2>
-  <h3>Orientation: {{ breakpointObserver.isMatched(webLandscape) ? 'Landscape' : 'Portrait' }}</h3>
-</ng-container>
+  <h2>Orientation: {{ breakpointObserver.isMatched(webLandscape) ? 'Landscape' : 'Portrait' }}</h2>
+</div>
 
-<h2>Breakpoints ranges:</h2>
-<ng-container *ngFor="let breakpoint of breakpointsInfo">
-  <p><strong>{{breakpoint.name}}</strong>: {{breakpoint.value.media}}</p>
-</ng-container>
+<mat-card>
+  <mat-card-title>Breakpoints ranges</mat-card-title>
+  <mat-card-content>
+    <ul>
+      <li *ngFor="let breakpoint of breakpointsInfo">
+        <p><strong>{{breakpoint.name}}</strong>: {{breakpoint.value.media}}</p>
+      </li>
+    </ul>
+  </mat-card-content>
+</mat-card>
+
 

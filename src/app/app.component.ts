@@ -49,6 +49,6 @@ export class AppComponent implements OnInit {
       Breakpoints.Tablet,
       Breakpoints.TabletLandscape,
       Breakpoints.TabletPortrait
-    ].map((breakpoint, index) => ({name: Object.keys(Breakpoints)[index],value: this.mediaMatcher.matchMedia(breakpoint)}));
+    ].map((breakpoint, index) => ({name: Object.keys(Breakpoints)[index], value: this.mediaMatcher.matchMedia(breakpoint)}));
   }
 }
